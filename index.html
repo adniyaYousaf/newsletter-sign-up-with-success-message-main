@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <main class="container">
+    <div class="main-card" id="maincard" aria-hidden="false">
+      <div class="card">
+        <h1 class="heading"> Stay updated!</h1>
+        <p> Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="list">
+          <li class="list-item"> <span class="icon"><img src="/assets/images/icon-list.svg" alt="list-icon"></span>
+            Measuring to ensure updates are a success</li>
+          <li class="list-item"> <span class="icon"><img src="/assets/images/icon-list.svg" alt="list-icon"></span>
+            Product discovery and building what matters</li>
+          <li class="list-item"> <span class="icon"><img src="/assets/images/icon-list.svg" alt="list-icon"></span> And
+            much more!</li>
+        </ul>
+
+        <label class="label" for="email"> Email address <span class="error" id="error"></span></label>
+        <input type="text" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" id="email"
+          placeholder="email@company.com" required >
+        <button class="btn" id="btn">
+          Subscribe to monthly newsletter</button>
+      </div>
+      <div class="img">
+
+      </div>
+    </div>
+
+    <div class="thankcard" id="thankcard" aria-hidden="true">
+      <img src="/assets/images/icon-list.svg" alt="icon-list">
+      <h1> Thanks for subscribing!</h1>
+      <p> A confirmation email has been sent to <span id="email-id"></span>.
+        Please open it and click the button inside to confirm your subscription.</p>
+      <button id="dismiss"> Dismiss message</button>
+    </div>
+
+  </main>
+  <script src="/main.js"></script>
+</body>
+
+</html>

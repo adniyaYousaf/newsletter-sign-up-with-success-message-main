@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url(/assets/fonts/Roboto-Regular.ttf);
+  src: url(/assets/fonts/Roboto-Bold.ttf);
+  font-size: 16px;
+}
+ul {
+  list-style: none;
+}
+
+/*---Main--------------------------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(235, 18%, 26%);
+}
+
+.main-card[aria-hidden=true] {
+  display: none;
+}
+
+.main-card[aria-hidden=false] {
+  display: flex;
+  justify-content: space-between;
+  min-height: 26rem;
+  width: 44rem;
+  padding: 1rem;
+  background: hsl(0, 0%, 100%);
+  border-radius: 1.5rem;
+}
+
+.card {
+  width: 26rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.card h1 {
+  margin-bottom: 1rem;
+}
+
+.img {
+  width: 16rem;
+  height: 25rem auto;
+  background: url(/assets/images/illustration-sign-up-desktop.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+.list {
+  margin-block: 1rem;
+}
+
+.list-item {
+  margin-top: 0.5rem;
+}
+.list-item .icon {
+  margin-right: 0.4rem;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 2rem;
+  font-weight: 700;
+}
+
+#email {
+  cursor: pointer;
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(235, 18%, 26%);
+  outline: none;
+  padding: 1rem;
+}
+#email #email[type=email]:focus {
+  border: 2px solid hsl(234, 29%, 20%);
+}
+
+.error {
+  color: hsl(4, 100%, 67%);
+}
+
+.btn {
+  cursor: pointer;
+  height: 3rem;
+  margin-block: 1rem;
+  background: hsl(234, 29%, 20%);
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 0.5rem;
+  transition: 0.5s ease-in;
+}
+.btn:hover, .btn:focus-visible {
+  background: linear-gradient(to right, hsl(347, 78%, 63%), hsl(4, 100%, 67%));
+}
+
+.thankcard[aria-hidden=true] {
+  display: none;
+}
+
+.thankcard[aria-hidden=false] {
+  height: 20rem;
+  width: 20rem;
+  display: grid;
+  background: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.thankcard[aria-hidden=false] img {
+  height: 2.5rem;
+}
+.thankcard[aria-hidden=false] p {
+  font-size: 15px;
+}
+.thankcard[aria-hidden=false] button {
+  cursor: pointer;
+  background: hsl(235, 18%, 26%);
+  border: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  border-radius: 0.4rem;
+}
+.thankcard[aria-hidden=false] #email-id {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/*----------MOBILE VERSION-----------*/
+@media (max-width: 23.4375rem) {
+  body {
+    height: auto;
+  }
+  .main-card {
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+  .card {
+    height: 30rem;
+    display: grid;
+    gap: 1rem;
+  }
+  .img {
+    width: 100vw;
+    height: 15rem;
+    background: url(/assets/images/illustration-sign-up-mobile.svg) no-repeat;
+    background-size: cover;
+    background-position: top;
+    border-radius: 0 0 2rem 2rem;
+  }
+  .img img {
+    height: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
